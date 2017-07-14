@@ -9743,7 +9743,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SUPPLY16" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND21" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="U$3" library="wiral" deviceset="XT30" device=""/>
-<part name="FRAME4" library="SparkFun-Aesthetics" deviceset="FRAME-A4L" device=""/>
 <part name="ENC/HALL" library="SamacSys_Parts" deviceset="S5B-PH-SM4-TB(LF)(SN)" device=""/>
 <part name="SUPPLY17" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="SUPPLY19" library="SparkFun-PowerSymbols" deviceset="12V" device=""/>
@@ -9810,6 +9809,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="SUPPLY18" gate="G$1" x="231.14" y="104.14"/>
 <instance part="GND23" gate="1" x="210.82" y="106.68" rot="R180"/>
 <instance part="GND24" gate="1" x="208.28" y="83.82"/>
+<instance part="ENC/HALL" gate="G$1" x="205.74" y="43.18"/>
+<instance part="SUPPLY17" gate="G$1" x="200.66" y="53.34"/>
+<instance part="SUPPLY19" gate="G$1" x="185.42" y="53.34"/>
+<instance part="GND22" gate="1" x="198.12" y="30.48"/>
+<instance part="HALL/ENC_POWER" gate="G$1" x="193.04" y="50.8" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -9942,6 +9946,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="228.6" y1="101.6" x2="231.14" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="101.6" x2="231.14" y2="104.14" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="HALL/ENC_POWER" gate="G$1" pin="3"/>
+<pinref part="SUPPLY17" gate="G$1" pin="3.3V"/>
+<wire x1="198.12" y1="50.8" x2="200.66" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="50.8" x2="200.66" y2="53.34" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -10019,6 +10029,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="213.36" y1="88.9" x2="208.28" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="88.9" x2="208.28" y2="86.36" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="ENC/HALL" gate="G$1" pin="5"/>
+<wire x1="205.74" y1="38.1" x2="198.12" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="GND22" gate="1" pin="GND"/>
+<wire x1="198.12" y1="38.1" x2="198.12" y2="33.02" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="V_BATT" class="0">
 <segment>
@@ -10050,6 +10066,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="C15" gate="G$1" pin="+"/>
 <wire x1="73.66" y1="142.24" x2="63.5" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="142.24" x2="63.5" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="HALL/ENC_POWER" gate="G$1" pin="1"/>
+<pinref part="SUPPLY19" gate="G$1" pin="12V"/>
+<wire x1="187.96" y1="50.8" x2="185.42" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="50.8" x2="185.42" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NRST" class="0">
@@ -10118,6 +10140,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="213.36" y1="93.98" x2="210.82" y2="93.98" width="0.1524" layer="91"/>
 <label x="210.82" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="ENC/HALL" gate="G$1" pin="3"/>
+<wire x1="205.74" y1="40.64" x2="200.66" y2="40.64" width="0.1524" layer="91"/>
+<label x="200.66" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="BATT_MEASURE" class="0">
 <segment>
@@ -10136,6 +10163,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="IO" gate="G$1" pin="8"/>
 <wire x1="228.6" y1="93.98" x2="231.14" y2="93.98" width="0.1524" layer="91"/>
 <label x="231.14" y="93.98" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="ENC/HALL" gate="G$1" pin="2"/>
+<wire x1="226.06" y1="43.18" x2="231.14" y2="43.18" width="0.1524" layer="91"/>
+<label x="231.14" y="43.18" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LSW" class="0">
@@ -10306,6 +10338,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="228.6" y1="91.44" x2="231.14" y2="91.44" width="0.1524" layer="91"/>
 <label x="231.14" y="91.44" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="ENC/HALL" gate="G$1" pin="4"/>
+<wire x1="226.06" y1="40.64" x2="231.14" y2="40.64" width="0.1524" layer="91"/>
+<label x="231.14" y="40.64" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="PA3" class="0">
 <segment>
@@ -10329,6 +10366,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="IO" gate="G$1" pin="12"/>
 <wire x1="228.6" y1="88.9" x2="231.14" y2="88.9" width="0.1524" layer="91"/>
 <label x="231.14" y="88.9" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="ENC/HALL" gate="G$1" pin="1"/>
+<wire x1="205.74" y1="43.18" x2="193.04" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="43.18" x2="193.04" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="HALL/ENC_POWER" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
@@ -11109,75 +11154,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="193.04" y1="58.42" x2="190.5" y2="58.42" width="0.1524" layer="91"/>
 <label x="190.5" y="58.42" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="R36" gate="G$1" pin="1"/>
-</segment>
-</net>
-</nets>
-</sheet>
-<sheet>
-<plain>
-</plain>
-<instances>
-<instance part="FRAME4" gate="G$1" x="0" y="0"/>
-<instance part="ENC/HALL" gate="G$1" x="40.64" y="129.54"/>
-<instance part="SUPPLY17" gate="G$1" x="35.56" y="139.7"/>
-<instance part="SUPPLY19" gate="G$1" x="20.32" y="139.7"/>
-<instance part="GND22" gate="1" x="33.02" y="116.84"/>
-<instance part="HALL/ENC_POWER" gate="G$1" x="27.94" y="137.16" rot="R90"/>
-</instances>
-<busses>
-</busses>
-<nets>
-<net name="ENC_A/HALL1" class="0">
-<segment>
-<pinref part="ENC/HALL" gate="G$1" pin="2"/>
-<wire x1="60.96" y1="129.54" x2="66.04" y2="129.54" width="0.1524" layer="91"/>
-<label x="66.04" y="129.54" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="ENC_B/HALL2" class="0">
-<segment>
-<pinref part="ENC/HALL" gate="G$1" pin="3"/>
-<wire x1="40.64" y1="127" x2="35.56" y2="127" width="0.1524" layer="91"/>
-<label x="35.56" y="127" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="ENC_Z/HALL3" class="0">
-<segment>
-<pinref part="ENC/HALL" gate="G$1" pin="4"/>
-<wire x1="60.96" y1="127" x2="66.04" y2="127" width="0.1524" layer="91"/>
-<label x="66.04" y="127" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="GND" class="0">
-<segment>
-<pinref part="ENC/HALL" gate="G$1" pin="5"/>
-<wire x1="40.64" y1="124.46" x2="33.02" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="GND22" gate="1" pin="GND"/>
-<wire x1="33.02" y1="124.46" x2="33.02" y2="119.38" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$22" class="0">
-<segment>
-<pinref part="ENC/HALL" gate="G$1" pin="1"/>
-<wire x1="40.64" y1="129.54" x2="27.94" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="129.54" x2="27.94" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="HALL/ENC_POWER" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="12V" class="0">
-<segment>
-<pinref part="HALL/ENC_POWER" gate="G$1" pin="1"/>
-<pinref part="SUPPLY19" gate="G$1" pin="12V"/>
-<wire x1="22.86" y1="137.16" x2="20.32" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="137.16" x2="20.32" y2="139.7" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="3.3V" class="0">
-<segment>
-<pinref part="HALL/ENC_POWER" gate="G$1" pin="3"/>
-<pinref part="SUPPLY17" gate="G$1" pin="3.3V"/>
-<wire x1="33.02" y1="137.16" x2="35.56" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="137.16" x2="35.56" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
